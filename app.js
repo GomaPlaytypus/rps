@@ -53,29 +53,13 @@ const checkForWinner = (playerScore, compScore) => {
         endScore.textContent = "...Wow... You tied!";
 }};
 
-const rockBtn = document.querySelector('#rock');
-const paperBtn = document.querySelector('#paper');
-const scissorsBtn = document.querySelector('#scissors');
+const rpsButtons = document.querySelectorAll('[data-selection]');
 
-rockBtn.addEventListener('click', () => {
-    let playerSelection = "rock";
+rpsButtons.forEach ((rpsButton) => {
+rpsButton.addEventListener('click', e => {
+    const playerSelection = rpsButton.dataset.selection;
     const computerSelection = Math.floor(Math.random() * rpsChoices.length);
-    console.log(playRound(playerSelection, computerSelection));
+    playRound(playerSelection, computerSelection);
     checkForWinner(playerScore, compScore);
-});
-
-
-
-paperBtn.addEventListener('click', () => {
-    let playerSelection = "paper";
-    const computerSelection = Math.floor(Math.random() * rpsChoices.length);
-    console.log(playRound(playerSelection, computerSelection));
-    checkForWinner(playerScore, compScore);
-});
-
-scissorsBtn.addEventListener('click', () => {
-    let playerSelection = "scissors";
-    const computerSelection = Math.floor(Math.random() * rpsChoices.length);
-    console.log(playRound(playerSelection, computerSelection));
-    checkForWinner(playerScore, compScore);
-}); 
+})
+})
