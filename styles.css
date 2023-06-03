@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }  
+
+ #buttons {
+display: flex;
+flex-direction: column;
+background-color: black;
+color:rgb(123, 255, 161);
+margin-left: 7cm;
+top: 2cm;
+align-items: stretch;
+width: 10cm;
+height: 400px;
+position:absolute;
+}
+
+button {
+    background-color: black;
+    color: aliceblue;
+    height:150px;
+    border: solid;
+    border-color: aliceblue;
+    border-width: 0.5ch;
+    font-size: 4ch;
+    font-family: 'VT323', monospace;
+}
+
+button:hover {
+    border-color: rgb(123, 255, 161);
+    color: rgb(123, 255, 161);
+}
+
+#choose {
+    text-align: center;
+    margin-top: 1ch;
+    margin-bottom: 1ch;
+    font-size: 4ch;
+    font-family: 'VT323', monospace;
+}
+
+#default {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 100px;
+    left: 750px;
+    z-index: 999;
+}
+
+
+#round-score-container {
+    background-color: black;
+    border: 0.7in solid aliceblue;
+    color: aliceblue;
+    border-width: 1ch;
+    left: 0.6cm;
+    bottom: 1.7in;
+    height:100px;
+    width:612px;
+    position: absolute;
+}
+
+#round-score {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: xx-large;
+}
+
+#score-keeper {
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+flex-wrap: nowrap;
+color: aliceblue;
+height: 400px;
+width: 200px;
+top: 2cm;
+left: 0.6cm;
+position:absolute;
+}
+
+#player-score {
+    height: 160px;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: xx-large;
+    background-color: black;
+    border: .5ch solid aliceblue;
+}
+
+#comp-score {
+    height: 160px;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: xx-large;
+    background-color: black;
+    border: .5ch solid aliceblue;
+}
+
+#end-score-container {
+background-color:orange;
+top: 1.5cm;
+right:1.5in;
+right:1.5in;
+position: absolute;
+} 
+
+#end-score {
+    color: rgb(123, 255, 161);
+    font-family: 'VT323', monospace;
+    font-size: 50px;
+    text-align: center;
+    top: 1.5cm;
+    right:1.5in;
+    left:8in;
+    position: fixed;
+}
+
+#restart {
+    text-align: left;
+    color:aliceblue;
+    font-family: 'VT323', monospace;
+    font-size: xx-large;
+    height:100px;
+    width:400px;
+    position:absolute;
+    top: 700px;
+    left: .6cm;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <img id="default" src="default.GIF" alt="computer" style="background-color: transparent;">
+
+<div id="buttons">
+    <p id="choose">CHOOSE YOUR MOVE</p>
+    <button class="selection" data-selection="rock">Rock</button>
+    <button class="selection" data-selection="paper">Paper</button>
+    <button class="selection" data-selection="scissors">Scissors</button>
+</div>
+
+<div id="score-keeper">
+    <div id="player-score">
+        Player:
+        <p id="kept-player-score"></p>
+    </div>
+    <div id="comp-score">
+        Computer:
+        <p id="kept-comp-score"></p>
+    </div>
+</div>
+
+<div id="round-score-container">
+    <p id="round-score"></p>
+</div>
+
+<div id="end-score-container">
+    <p id="end-score"></p>
+</div>
+
+<p id="restart">Press ENTER to Restart Game</p>
+
+</body>
+<script src="app.js" defer></script>
+</html>
