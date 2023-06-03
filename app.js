@@ -1,3 +1,27 @@
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+canvas.addEventListener("touchmove", function(event) {
+    event.preventDefault();
+  }, { passive: false });
+
+const backgroundImage = new Image();
+backgroundImage.src = "background.jpg";
+canvas.width = 1500;
+canvas.height = 900;
+backgroundImage.onload = function() {
+    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+};
+
+const defaultGif = new Image();
+defaultGif.src = "default.GIF";
+
+defaultGif.width = 700;
+defaultGif.height = 700;
+defaultGif.onload = function() {
+    ctx.drawImage(defaultGif, 750, 100, defaultGif.width, defaultGif.height);
+};
+
 const rpsChoices = [
     'rock',
     'paper',
@@ -64,3 +88,21 @@ rpsButton.addEventListener('click', e => {
 })
 });
 
+const resetGame = () => {
+    playerScore = 0;
+    compScore = 0;
+    const keptPlayerScore = document.getElementById('kept-player-score');
+    const keptCompScore = document.getElementById('kept-comp-score');
+    const roundScore = document.getElementById('round-score');
+    const endScore = document.getElementById('end-score');
+    keptPlayerScore.textContent = "";
+    keptCompScore.textContent = "";
+    roundScore.textContent = "";
+    endScore.textContent = "";
+};
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === "Enter") {
+        resetGame();
+    }
+});
