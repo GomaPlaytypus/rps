@@ -101,3 +101,34 @@ position:absolute;
     background-color: black;
     border: .5ch solid aliceblue;
 }
+
+#end-score-container {
+background-color:orange;
+top: 1.5cm;
+right:1.5in;
+right:1.5in;
+position: fixed;
+} 
+
+#end-score {
+    color: rgb(123, 255, 161);
+    font-family: 'VT323', monospace;
+    font-size: 50px;
+    text-align: center;
+    position: fixed;
+    top: 1.5cm;
+    right:1.5in;
+    left:8in;
+}
+
+#restart {
+    text-align: left;
+    color:aliceblue;
+    font-family: 'VT323', monospace;
+    font-size: xx-large;
+    height:100px;
+    width:400px;
+    position:fixed;
+    top:.5cm;
+    right:1.7in;
+}

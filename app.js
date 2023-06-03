@@ -3,11 +3,11 @@ const rpsChoices = [
     'paper',
     'scissors'
 ];
+const keptPlayerScore = document.getElementById('kept-player-score');
+const keptCompScore = document.getElementById('kept-comp-score');
+const roundScore = document.getElementById('round-score');
 
 function playRound(playerSelection, computerSelection) {
-    const keptPlayerScore = document.getElementById('kept-player-score');
-    const keptCompScore = document.getElementById('kept-comp-score');
-    const roundScore = document.getElementById('round-score');
     if (playerSelection == "rock" && computerSelection == 0) {
         roundScore.textContent = "It's a tie! You both chose rock!";
     } else if (playerSelection == "paper" && computerSelection == 0) {
@@ -62,4 +62,5 @@ rpsButton.addEventListener('click', e => {
     playRound(playerSelection, computerSelection);
     checkForWinner(playerScore, compScore);
 })
-})
+});
+
